@@ -30,12 +30,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="px-8 py-2 bg-primary text-primary-foreground">
-          <Navbar />
+        <header className="px-8  py-2 bg-primary text-primary-foreground">
+         <div className="max-w-screen-2xl mx-auto">
+           <Navbar />
           <FilterNavbar />
           <SearchNavbar/>
+         </div>
         </header>
-        {children}
+       <main className="max-w-screen-2xl mx-auto">
+         {children}
+       </main>
       </body>
     </html>
   );
